@@ -1,10 +1,10 @@
 # Constructors
 
-#### Matrix Default Constructor
+### Matrix Default Constructor
 	
 	Matrix m()
 
-####### Description
+###### Description
 	Initializes m as a 1x1 Matrix with the element set to 0.
 
 ## Matrix Two Parameter Constructor
