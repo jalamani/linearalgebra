@@ -1,11 +1,13 @@
-# Constructors
+# Linear Algebra Library Documentation
+
+## Constructors
 
 ### Matrix Default Constructor
 	
 	Matrix m()
 
 ###### Description
-	Initializes m as a 1x1 Matrix with the element set to 0.
+Initializes m as a 1x1 Matrix with the element set to 0.
 
 ## Matrix Two Parameter Constructor
 	
