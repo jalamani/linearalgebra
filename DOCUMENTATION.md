@@ -102,6 +102,14 @@ Returns a matrix that is the product of *m* and *m2*. If *m* and *m2* cannot be 
 - *m2*: Second Matrix to be multiplied with *m*.
 
 
+### Set Each Value
+	
+	m.setEach();
+
+##### Description
+	
+Prompts the user to assign a value to each element in *m*.
+
 
 
 	

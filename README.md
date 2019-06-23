@@ -16,9 +16,10 @@ At the top of your cpp file, just put:
 - Install linearalgebra.h in the same directory as the cpp file.
 - Install main.cpp file for a sample implementation of the library.
 
-## main.cpp Compilation
+## main.cpp Compilation and Run
 
 - g++ -std=c++11 main.cpp -o main
+- ./main
 
 ## Contribute
 
