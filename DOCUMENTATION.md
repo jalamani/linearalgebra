@@ -23,8 +23,8 @@ Initializes *m* as an *r* x *c* matrix with all elements set to 0. If *r* or *c*
 
 ##### Parameters	
 
--*r*: Integer representing the number of rows in the matrix.
--*c*: Integer representing the number of columns in the matrix.
+- *r*: Integer representing the number of rows in the matrix.
+- *c*: Integer representing the number of columns in the matrix.
 
 ### Matrix Three Parameter Constructor
 	
@@ -36,9 +36,9 @@ Initializes *m* as an *r* x *c* matrix with all elements set to *value*. If *r* 
 
 ##### Parameters	
 
--*r*: Integer representing the number of rows in the matrix.
--*c*: Integer representing the number of columns in the matrix.
--*value*: Integer representing the value set to each element of the matrix.
+- *r*: Integer representing the number of rows in the matrix.
+- *c*: Integer representing the number of columns in the matrix.
+- *value*: Integer representing the value set to each element of the matrix.
 
 ## Functions
 
@@ -69,9 +69,9 @@ Assigns *value* to (*r*, *c*) in matrix *m*. If *r* or *c* are out of bounds, wi
 
 ##### Parameters	
 
--*r*: Integer representing the row used to index the matrix.
--*c*: Integer representing the column used to index the matrix.
--*value*: Integer representing the value to be assigned.
+- *r*: Integer representing the row used to index the matrix.
+- *c*: Integer representing the column used to index the matrix.
+- *value*: Integer representing the value to be assigned.
 
 ### Print Matrix
 	
@@ -99,7 +99,7 @@ Returns a matrix that is the product of *m* and *m2*. If *m* and *m2* cannot be 
 
 ##### Parameters	
 
--*m2*: Second Matrix to be multiplied with *m*.
+- *m2*: Second Matrix to be multiplied with *m*.
 
 
 
