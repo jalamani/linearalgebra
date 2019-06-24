@@ -87,7 +87,7 @@ class Matrix{
 		}
 		Matrix matrixMultiply(Matrix b){
 			if(column != b.row){
-				std::cout<< "Matrix multiplication can only be done if the number of columns in the first matrix is equal to the number of rows in the second. " <<std::endl;
+				std::cout<< "\nMatrix multiplication can only be done if the number of columns in the first matrix is equal to the number of rows in the second.\n " <<std::endl;
 				return *this;
 			}
 			Matrix c(row, b.column);

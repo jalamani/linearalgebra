@@ -1,15 +1,23 @@
 #include <iostream>
+#include <limits>
 #include "linearalgebra.h"
 using namespace std;
 
+//Function to print s, get an input x, and ignore non-integer inputs
+void coutcin(string s, int &x){
+	while (cout << s && !(cin >> x)) {
+    	cin.clear(); 
+    	cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
+    	cout << "Invalid input; please re-enter.\n";
+	}
+}
+
+//Function to print the prompt for creating a matrix
 Matrix matrixPrompt(){
 	int userRows, userColumns, userValue;
-	cout<< "Enter number of rows in the matrix:" << endl;
-	cin>>userRows;
-	cout<< "Enter number of columns:" << endl;
-	cin>>userColumns;
-	cout<< "Enter the initial value of the matrix:" << endl;
-	cin>> userValue;
+	coutcin("Enter number of rows in the matrix:\n", userRows);	
+	coutcin("Enter number of columns:\n", userColumns);	
+	coutcin("Enter the initial value of the matrix:\n", userValue);
 	Matrix d(userRows,userColumns,userValue);
 	cout<< "\nHere is your matrix:" <<endl;
 	d.printMatrix();
@@ -19,14 +27,20 @@ Matrix matrixPrompt(){
 int main(){
 	int userRows, userColumns, userValue, userSelect;	
 	bool hasMatrix = false;
-	int change;
+	bool cont = true;
+	char change;
 	cout<< "Welcome to the demo for this linear algebra library. Currently, only matrix operations are available." << endl;
-	while(1){	
+	while(cont){	
 		Matrix d = matrixPrompt();
 		hasMatrix = true;
 		while(hasMatrix){
-			cout<< "\nYou can do the following with this matrix.\n1. Transpose\n2. Multiply with another matrix\n3. Enter unique values into this matrix\n4. Create a new matrix.\nEnter the number of your choice:" << endl;
-			cin>>userSelect;
+			coutcin("\nYou can do the following with this matrix.\n"
+				"1. Transpose\n"
+				"2. Multiply with another matrix\n"
+				"3. Enter unique values into this matrix\n"
+				"4. Create a new matrix.\n"
+				"5. Quit. \n"
+				"Enter the number of your choice:\n", userSelect);
 			switch(userSelect){
     			case 1:{
 					cout<< "\nHere is your transposed matrix:" <<endl;
@@ -53,6 +67,10 @@ int main(){
         		case 4:{
         			hasMatrix = false;
         			break;
+        		}
+        		case 5:{
+        			hasMatrix = false;
+        			cont = false;
         		}
     			default:{
     				continue;
